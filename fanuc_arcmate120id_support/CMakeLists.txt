@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(fanuc_arcmate120id12_support)
+project(fanuc_arcmate120id_support)
 
 find_package(catkin REQUIRED)
 

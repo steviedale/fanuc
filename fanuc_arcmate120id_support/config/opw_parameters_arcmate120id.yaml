@@ -1,3 +1,5 @@
+# TODO: the commented out setting are for the lrmate200ib, this needs to be updated for the arcmate120id12l
+'''
 #
 # Parameters for use with IK solvers which support OPW (Ortho-Parallel Wrist)
 # kinematic configurations, as described in the paper "An Analytical Solution
@@ -18,3 +20,4 @@ opw_kinematics_geometric_parameters:
   c4: 0.08
 opw_kinematics_joint_offsets: [0.0, 0.0, deg(-90.0), 0.0, 0.0, deg(180.0)]
 opw_kinematics_joint_sign_corrections: [1, 1, -1, -1, -1, -1]
+'''

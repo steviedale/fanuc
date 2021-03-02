@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_arcmate120id12_support)/urdf/arcmate120id12.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_arcmate120id_support)/urdf/arcmate120id.xacro'" />
 
   <!-- DELETE THIS (START) -->
   <node name="robot_state_publisher" pkg="robot_state_publisher"
