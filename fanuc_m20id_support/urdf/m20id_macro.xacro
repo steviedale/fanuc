@@ -1,25 +1,21 @@
 <?xml version="1.0"?>
-
-<!-- ATTENTION: mesh files and joint poses currently represent the 120iD and NOT the 120iD12L -->
-<!-- TODO: update mesh files and joint poses for 120iD12L -->
-
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
   <xacro:include filename="$(find fanuc_resources)/urdf/common_materials.xacro"/>
 
-  <xacro:macro name="fanuc_arcmate120id12l" params="prefix">
+  <xacro:macro name="fanuc_m20id" params="prefix">
     <!-- links: main serial chain -->
     <link name="${prefix}base_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/visual/base_link.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/visual/base_link.stl"/>
         </geometry>
         <xacro:material_fanuc_black/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/collision/base_link.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/collision/base_link.stl"/>
         </geometry>
       </collision>
     </link>
@@ -27,14 +23,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/visual/link_1.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/visual/link_1.stl"/>
         </geometry>
         <xacro:material_fanuc_yellow/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/collision/link_1.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/collision/link_1.stl"/>
         </geometry>
       </collision>
     </link>
@@ -42,14 +38,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/visual/link_2.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/visual/link_2.stl"/>
         </geometry>
         <xacro:material_fanuc_black/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/collision/link_2.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/collision/link_2.stl"/>
         </geometry>
       </collision>
     </link>
@@ -57,14 +53,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/visual/link_3.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/visual/link_3.stl"/>
         </geometry>
         <xacro:material_fanuc_yellow/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/collision/link_3.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/collision/link_3.stl"/>
         </geometry>
       </collision>
     </link>
@@ -72,14 +68,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/visual/link_4.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/visual/link_4.stl"/>
         </geometry>
         <xacro:material_fanuc_black/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/collision/link_4.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/collision/link_4.stl"/>
         </geometry>
       </collision>
     </link>
@@ -87,14 +83,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/visual/link_5.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/visual/link_5.stl"/>
         </geometry>
         <xacro:material_fanuc_yellow/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/collision/link_5.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/collision/link_5.stl"/>
         </geometry>
       </collision>
     </link>
@@ -102,14 +98,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/visual/link_6.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/visual/link_6.stl"/>
         </geometry>
         <xacro:material_fanuc_black/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_arcmate120id_support/meshes/arcmate120id12l/collision/link_6.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id/collision/link_6.stl"/>
         </geometry>
       </collision>
     </link>
@@ -148,7 +144,7 @@
       <parent link="${prefix}link_4"/>
       <child link="${prefix}link_5"/>
       <axis xyz="0 0 1"/>
-      <limit effort="0" lower="${radians(-140)}" upper="${radians(140)}" velocity="${radians(450)}"/>
+      <limit effort="0" lower="${radians(-140)}" upper="${radians(140)}" velocity="${radians(420)}"/>
     </joint>
     <joint name="${prefix}joint_6" type="revolute">
       <origin xyz="0.0555 0 ${0.0492+0.0008}" rpy="${pi/2} 0 ${pi/2}"/>

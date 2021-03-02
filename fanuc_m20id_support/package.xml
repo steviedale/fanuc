@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
-  <name>fanuc_arcmate120id_support</name>
+  <name>fanuc_m20id_support</name>
   <version>0.5.0</version>
   <description>
     <p>
@@ -28,7 +28,7 @@
   <maintainer email="steven.dale@swri.org">Stevie Dale (Southwest Research Institute)</maintainer>
   <license>BSD</license>
 
-  <url type="website">http://ros.org/wiki/fanuc_arcmate120id_support</url>
+  <url type="website">http://ros.org/wiki/fanuc_m20id_support</url>
   <url type="bugtracker">https://github.com/ros-industrial/fanuc/issues</url>
   <url type="repository">https://github.com/ros-industrial/fanuc</url>
 
@@ -52,7 +52,7 @@
         <tag>fanuc</tag>
         <tag>industrial</tag>
         <tag>ros-industrial</tag>
-        <tag>arcmate120id12</tag>
+        <tag>m20id12</tag>
       </tags>
     </rosindex>
     <ros_industrial>

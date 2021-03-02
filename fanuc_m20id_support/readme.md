@@ -1,4 +1,4 @@
-# fanuc_arcmate120id_support
+# fanuc_m20id_support
 
 ## Overview
 
