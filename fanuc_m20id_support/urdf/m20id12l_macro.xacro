@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 
 <!-- ATTENTION: mesh files and joint poses currently represent the 120iD and NOT the 120iD12L -->
-<!-- TODO: update mesh files and joint poses for 120iD12L -->
 
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
   <xacro:include filename="$(find fanuc_resources)/urdf/common_materials.xacro"/>
@@ -72,14 +71,53 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/visual/link_4.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/visual/link_4_1.stl"/>
+        </geometry>
+        <xacro:material_fanuc_yellow/>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/visual/link_4_2.stl"/>
+        </geometry>
+        <xacro:material_fanuc_yellow/>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/visual/link_4_3.stl"/>
+        </geometry>
+        <xacro:material_fanuc_yellow/>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/visual/link_4_4.stl"/>
         </geometry>
         <xacro:material_fanuc_yellow/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/collision/link_4.stl"/>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/collision/link_4_1.stl"/>
+        </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/collision/link_4_2.stl"/>
+        </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/collision/link_4_3.stl"/>
+        </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_m20id_support/meshes/m20id12l/collision/link_4_4.stl"/>
         </geometry>
       </collision>
     </link>
@@ -116,45 +154,45 @@
 
     <!-- joints: main serial chain -->
     <joint name="${prefix}joint_1" type="revolute">
-      <origin xyz="0 0 0.157" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="${prefix}base_link"/>
       <child link="${prefix}link_1"/>
       <axis xyz="0 0 1"/>
       <limit effort="0" lower="${radians(-170)}" upper="${radians(170)}" velocity="${radians(210)}"/>
     </joint>
     <joint name="${prefix}joint_2" type="revolute">
-      <origin xyz="0.075 -0.085 ${0.268+0.00032}" rpy="${pi/2} 0 0"/>
+      <origin xyz="0.075 0 0.425" rpy="0 0 0"/>
       <parent link="${prefix}link_1"/>
       <child link="${prefix}link_2"/>
-      <axis xyz="0 0 -1"/>
+      <axis xyz="0 1 0"/>
       <limit effort="0" lower="${radians(-100)}" upper="${radians(160)}" velocity="${radians(210)}"/>
     </joint>
     <joint name="${prefix}joint_3" type="revolute">
-      <origin xyz="0 0.84 -0.0228" rpy="${pi} 0 0"/>
+      <origin xyz="0 0 0.84" rpy="0 0 0"/>
       <parent link="${prefix}link_2"/>
       <child link="${prefix}link_3"/>
-      <axis xyz="0 0 -1"/>
+      <axis xyz="0 1 0"/>
       <limit effort="0" lower="${radians(-190)}" upper="${radians(268.4)}" velocity="${radians(265)}"/>
     </joint>
     <joint name="${prefix}joint_4" type="revolute">
-      <origin xyz="0.2945 -0.215 0.0615" rpy="${pi/2} 0 ${pi/2}"/>
+      <origin xyz="-0.075 0 0.215" rpy="0 0 0"/>
       <parent link="${prefix}link_3"/>
       <child link="${prefix}link_4"/>
-      <axis xyz="0 0 -1"/>
+      <axis xyz="1 0 0"/>
       <limit effort="0" lower="${radians(-200)}" upper="${radians(200)}" velocity="${radians(420)}"/>
     </joint>
     <joint name="${prefix}joint_5" type="revolute">
-      <origin xyz="0.0004913 -0.0501976 1.0445" rpy="${-pi/2} ${-pi/2} 0"/>
+      <origin xyz="1.415 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_4"/>
       <child link="${prefix}link_5"/>
-      <axis xyz="0 0 -1"/>
-      <limit effort="0" lower="${radians(-140)}" upper="${radians(140)}" velocity="${radians(450)}"/>
+      <axis xyz="0 -1 0"/>
+      <limit effort="0" lower="${radians(-140)}" upper="${radians(140)}" velocity="${radians(420)}"/>
     </joint>
     <joint name="${prefix}joint_6" type="revolute">
-      <origin xyz="0.0555 0 ${0.0492+0.0008}" rpy="${pi/2} 0 ${pi/2}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_5"/>
       <child link="${prefix}link_6"/>
-      <axis xyz="0 0 -1"/>
+      <axis xyz="1 0 0"/>
       <limit effort="0" lower="${radians(-270)}" upper="${radians(270)}" velocity="${radians(720)}"/>
     </joint>
 
@@ -182,3 +220,4 @@
     </joint>
   </xacro:macro>
 </robot>
+<!-- TODO: update mesh files and joint poses for 120iD12L -->
