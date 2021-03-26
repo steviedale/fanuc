@@ -175,21 +175,21 @@
       <limit effort="0" lower="${radians(-190)}" upper="${radians(268.4)}" velocity="${radians(265)}"/>
     </joint>
     <joint name="${prefix}joint_4" type="revolute">
-      <origin xyz="-0.075 0 0.215" rpy="0 0 0"/>
+      <origin xyz="0 0 0.215" rpy="0 0 0"/>
       <parent link="${prefix}link_3"/>
       <child link="${prefix}link_4"/>
       <axis xyz="-1 0 0"/>
       <limit effort="0" lower="${radians(-200)}" upper="${radians(200)}" velocity="${radians(420)}"/>
     </joint>
     <joint name="${prefix}joint_5" type="revolute">
-      <origin xyz="1.415 0 0" rpy="0 0 0"/>
+      <origin xyz="1.340 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_4"/>
       <child link="${prefix}link_5"/>
       <axis xyz="0 -1 0"/>
       <limit effort="0" lower="${radians(-140)}" upper="${radians(140)}" velocity="${radians(420)}"/>
     </joint>
     <joint name="${prefix}joint_6" type="revolute">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0.075 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_5"/>
       <child link="${prefix}link_6"/>
       <axis xyz="-1 0 0"/>
@@ -207,7 +207,7 @@
     <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
     <link name="${prefix}flange"/>
     <joint name="${prefix}joint_6-flange" type="fixed">
-      <origin xyz="0.075 0 0" rpy="0 ${-pi/2} ${pi}"/>
+      <origin xyz="0 0 0" rpy="0 ${-pi/2} ${pi}"/>
       <parent link="${prefix}link_6"/>
       <child link="${prefix}flange"/>
     </joint>
