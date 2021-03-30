@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 
-<!-- ATTENTION: mesh files and joint poses currently represent the 120iD and NOT the 120iD12L -->
-
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
   <xacro:include filename="$(find fanuc_resources)/urdf/common_materials.xacro"/>
 
@@ -220,4 +218,3 @@
     </joint>
   </xacro:macro>
 </robot>
-<!-- TODO: update mesh files and joint poses for 120iD12L -->
